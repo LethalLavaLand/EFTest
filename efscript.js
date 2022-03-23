@@ -3,11 +3,28 @@ var startupDelay = 4000;
 setTimeout(delayStart, startupDelay);
 
 function delayStart() {
-    setInterval(scriptLoop, 1000);
+    
+    //addAction
+    //X({type:gw,challenge:0});
+    
+    //closeAllDialogs
+    //La();
+    
+    //update
+    //W();
+    
+    const button = document.createElement('button');
+    button.innerText = 'Bungus';
+    button.addEventListener('click', () => {
+      alert('bingo bango');  
+    })
+    document.body.appendChild(button);
+    
+    //setInterval(scriptLoop, 1000);
 }
 
 function scriptLoop(){
-    console.log("test");
+    //console.log("test");
 }
 
     //Fv(true, false, false);
