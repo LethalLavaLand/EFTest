@@ -123,28 +123,89 @@ function delayStart() {
     productionFruitInfo.style.verticalAlign = "middle";
     div1.appendChild(productionFruitInfo);
     
+    
+    
+    const blueprintTInput = document.createElement('input');
+    blueprintTInput.id = "blueprintTInput";
+    blueprintTInput.style.position = "absolute";
+    blueprintTInput.style.width = "50px";
+    blueprintTInput.style.height = "50px";
+    blueprintTInput.style.top = "450px";
+    blueprintTInput.style.fontSize = "150%";
+    blueprintTInput.style.left = "170px";
+    blueprintTInput.value = 3;
+    div1.appendChild(blueprintTInput);
+    var bp = document.getElementById("blueprintTInput").value;
+    
+    const blueprintTInfo = document.createElement('label');
+    blueprintTInfo.innerText = "Blueberry Jam";
+    blueprintTInfo.style.position = "absolute";
+    blueprintTInfo.style.width = "150px";
+    blueprintTInfo.style.height = "50px";
+    blueprintTInfo.style.top = "465px";
+    blueprintTInfo.style.fontSize = "120%";
+    blueprintTInfo.style.verticalAlign = "middle";
+    div1.appendChild(blueprintTInfo);
+    
+    
+    
     const atranscensionInfo = document.createElement('label');
     atranscensionInfo.innerText = "No bungus amungus";
     atranscensionInfo.style.position = "absolute";
     atranscensionInfo.style.width = "350px";
     atranscensionInfo.style.height = "50px";
-    atranscensionInfo.style.top = "465px";
+    atranscensionInfo.style.top = "565px";
     atranscensionInfo.style.fontSize = "170%";
     atranscensionInfo.style.verticalAlign = "middle";
     div1.appendChild(atranscensionInfo);
-    
+    transcendInfo = atranscensionInfo;
     
     //setInterval(scriptLoop, 1000);
 }
 
 function startBungus(){
     isBungus = !isBungus;
-    alert('bungus');
+    if (isBungus){
+        transcendTime = document.getElementById("transcendTimeInput").value * 60;
+        document.getElementById("transcendTimeInput").disabled = true;
+        document.getElementById("productionTimeInput").disabled = true;
+        switchFruits(false);  
+        transcendInfo.innerText = "Startus";
+    }
+    else{
+        document.getElementById("transcendTimeInput").disabled = false;
+        document.getElementById("productionTimeInput").disabled = true;
+        transcendInfo.innerText = "No bungus amungus";
+        timePassed = 0;
+    }
+    //alert('bungus');
     document.getElementById("startTranscends").innerText = isBungus ? "Stopus" : "Bungus?";
 }
 
+var transcendTime = 1000;
+var productionTime = 700;
+var timePassed = 0;
+var transcendInfo = null;
 function scriptLoop(){
-    //console.log("test");
+    
+    if (timePassed == productionTime){
+         switchFruits(true);  
+    }
+    if (timePassed >= transcendTime){        
+        timePassed = 0;
+        switchFruits(false);  
+        autoBungus();
+        setInterval(scriptLoop, 3000);
+        transcendInfo.innerText = "Bungus commence";
+        return;   
+    }
+    if (!isBungus){
+        return;   
+    }
+    
+    transcendInfo.innerText = "Time until bungus: " + (transcendTime - timePassed) + "s";
+    timePassed++;
+    setInterval(scriptLoop, 1000);
 }
 
 function autoBungus(){     
@@ -156,6 +217,27 @@ function autoBungus(){
     
     //update
     W();
+    
+    setInterval(loadBlueprint, 500);
+}
+
+//FALSE == SPEED && TRUE == PRODUCTION
+function switchFruits(var x){
+    if (x){
+        X({type:Av,slot:document.getElementById("productionFruitInput").value,silent:true,pi:true})
+    }
+    else{
+        X({type:Av,slot:document.getElementById("speedFruitInput").value,silent:true,pi:true})
+    }
+}
+
+function loadBlueprint(){
+    //addAction({type:ACTION_PLANT_BLUEPRINT, blueprint:blueprints[index]});
+    var bpt = document.getElementById("blueprintTInput").value;
+    if (bpt > 9 || bpt <= 0){
+        btp = 1;
+    }
+    X({type:Lz,fh:g[bpt-1]})
 }
 
 setTimeout(delayStart, startupDelay);
