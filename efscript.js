@@ -13,11 +13,19 @@ function delayStart() {
     //update
     //W();
     
+    const div1 = document.createElement('div');
     const button = document.createElement('button');
     button.innerText = 'Bungus';
     button.addEventListener('click', () => {
       alert('bingo bango');  
     })
+    
+    div1.style.left = "700px";
+    
+    var b = document.body;
+    b.insertAdjacentElement("beforebegin", div1);
+    div1.appendChild(button);
+    
     document.body.appendChild(button);
     
     //setInterval(scriptLoop, 1000);
