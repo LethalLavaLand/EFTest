@@ -7,7 +7,7 @@ function delayStart() {
 }
 
 function scriptLoop(){
-    print("test");
+    console.log("test");
 }
 
     //Fv(true, false, false);
