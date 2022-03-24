@@ -308,7 +308,7 @@ var bungify = true;
 function translateBungus(){
     bungify = !bungify;
     if (!bungify){
-        document.getElementById("startTranscends").innerText = "Start";
+        document.getElementById("startTranscends").innerText = isBungus ? "Stop" : "Start";
         document.getElementById("info1").innerText = "Transcension time:";
         document.getElementById("info2").innerText = "Production time:";
         document.getElementById("sfi").innerText = "Speed fruit:";
@@ -316,7 +316,7 @@ function translateBungus(){
         document.getElementById("bbj").innerText = "Blueprint:";
     }
     else{
-        document.getElementById("startTranscends").innerText = "Bungus?";
+        document.getElementById("startTranscends").innerText = isBungus ? "Stopus" : "Bungus?";
         document.getElementById("info1").innerText = "Time for bungus:";
         document.getElementById("info2").innerText = "Time for wungus:";
         document.getElementById("sfi").innerText = "Bungus fruit:";
