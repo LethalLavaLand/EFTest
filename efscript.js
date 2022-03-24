@@ -230,13 +230,13 @@ function autoBungus(){
     //update
     W();
     
-    var bpt = document.getElementById("blueprintTInput").value;
-    if (bpt > 9 || bpt <= 0){
-        btp = 1;
-    }
-    X({type:Lz,fh:B.Ld[bpt-1]})
-    W();
-    //setTimeout(loadBlueprint, 2000);
+    //var bpt = document.getElementById("blueprintTInput").value;
+    //if (bpt > 9 || bpt <= 0){
+    //    btp = 1;
+    //}
+    //X({type:Lz,fh:B.Ld[bpt-1]})
+    //W();
+    setTimeout(loadBlueprint, 500);
 }
 
 //FALSE == SPEED && TRUE == PRODUCTION
