@@ -271,6 +271,8 @@ function scriptLoop(){
             if (getWeathers()){
                 bungusAbility(1);
             }
+            
+            collectFern();
         }
     }
 
@@ -369,6 +371,17 @@ function getWeathers(){
     
     return !((sun < Rg(120) && B.Ua == 0) || (mist < Rg(180) && B.Ua == 1) || (rainbow < Rg(240) && B.Ua == 2));
     //return (sun < Rg(120) && B.Ua != 0) && (mist < Rg(180) && B.Ua != 1) && (rainbow < Rg(240) && B.Ua != 2);
+}
+
+function collectFern(){
+    for(var XX = 0; XX <= 9; XX++) {
+        for(var YY = 0; YY <= 9; YY++) {
+            X({type:Mv,x:XX,y:YY});
+        }
+    }
+    W();
+    //X({type:Mv,x:B.Nf,y:B.$b});
+    //!N&&B.qa&&B.Ca==L.x&&B.Da==L.y
 }
 
 setTimeout(delayStart, startupDelay);
