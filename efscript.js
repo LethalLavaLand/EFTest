@@ -69,7 +69,7 @@ function delayStart() {
     productionTimeInput.style.position = "absolute";
     productionTimeInput.style.width = "150px";
     productionTimeInput.style.height = "50px";
-    productionTimeInput.style.top = "150px";
+    productionTimeInput.style.top = "110px";
     productionTimeInput.style.fontSize = "150%";
     productionTimeInput.style.left = "170px";
     productionTimeInput.value = 50;
@@ -82,7 +82,7 @@ function delayStart() {
     info2.style.position = "absolute";
     info2.style.width = "150px";
     info2.style.height = "50px";
-    info2.style.top = "165px";
+    info2.style.top = "125px";
     info2.style.fontSize = "120%";
     info2.style.verticalAlign = "middle";
     div1.appendChild(info2);
@@ -94,7 +94,7 @@ function delayStart() {
     speedFruitInput.style.position = "absolute";
     speedFruitInput.style.width = "50px";
     speedFruitInput.style.height = "50px";
-    speedFruitInput.style.top = "250px";
+    speedFruitInput.style.top = "170px";
     speedFruitInput.style.fontSize = "150%";
     speedFruitInput.style.left = "170px";
     speedFruitInput.value = 3;
@@ -107,7 +107,7 @@ function delayStart() {
     speedFruitInfo.style.position = "absolute";
     speedFruitInfo.style.width = "150px";
     speedFruitInfo.style.height = "50px";
-    speedFruitInfo.style.top = "265px";
+    speedFruitInfo.style.top = "185px";
     speedFruitInfo.style.fontSize = "120%";
     speedFruitInfo.style.verticalAlign = "middle";
     div1.appendChild(speedFruitInfo);
@@ -118,7 +118,7 @@ function delayStart() {
     productionFruitInput.style.position = "absolute";
     productionFruitInput.style.width = "50px";
     productionFruitInput.style.height = "50px";
-    productionFruitInput.style.top = "350px";
+    productionFruitInput.style.top = "230px";
     productionFruitInput.style.fontSize = "150%";
     productionFruitInput.style.left = "170px";
     productionFruitInput.value = 4;
@@ -131,7 +131,7 @@ function delayStart() {
     productionFruitInfo.style.position = "absolute";
     productionFruitInfo.style.width = "150px";
     productionFruitInfo.style.height = "50px";
-    productionFruitInfo.style.top = "365px";
+    productionFruitInfo.style.top = "245px";
     productionFruitInfo.style.fontSize = "120%";
     productionFruitInfo.style.verticalAlign = "middle";
     div1.appendChild(productionFruitInfo);
@@ -143,7 +143,7 @@ function delayStart() {
     blueprintTInput.style.position = "absolute";
     blueprintTInput.style.width = "50px";
     blueprintTInput.style.height = "50px";
-    blueprintTInput.style.top = "450px";
+    blueprintTInput.style.top = "290px";
     blueprintTInput.style.fontSize = "150%";
     blueprintTInput.style.left = "170px";
     blueprintTInput.value = 3;
@@ -152,15 +152,40 @@ function delayStart() {
     
     const blueprintTInfo = document.createElement('label');
     blueprintTInfo.id = "bbj";
-    blueprintTInfo.innerText = "Blueberry Jam";
+    blueprintTInfo.innerText = "Blueberry Jam:";
     blueprintTInfo.style.position = "absolute";
     blueprintTInfo.style.width = "150px";
     blueprintTInfo.style.height = "50px";
-    blueprintTInfo.style.top = "465px";
+    blueprintTInfo.style.top = "305px";
     blueprintTInfo.style.fontSize = "120%";
     blueprintTInfo.style.verticalAlign = "middle";
     div1.appendChild(blueprintTInfo);
     
+          
+    
+    const sblueprintTInput = document.createElement('input');
+    sblueprintTInput.id = "sblueprintTInput";
+    sblueprintTInput.style.position = "absolute";
+    sblueprintTInput.style.width = "50px";
+    sblueprintTInput.style.height = "50px";
+    sblueprintTInput.style.top = "290px";
+    sblueprintTInput.style.fontSize = "150%";
+    sblueprintTInput.style.left = "470px";
+    sblueprintTInput.value = 3;
+    div1.appendChild(sblueprintTInput);
+    var bp = document.getElementById("sblueprintTInput").value;
+    
+    const sblueprintTInfo = document.createElement('label');
+    sblueprintTInfo.id = "sbbj";
+    sblueprintTInfo.innerText = "Summer Blueprint:";
+    sblueprintTInfo.style.position = "absolute";
+    sblueprintTInfo.style.width = "150px";
+    sblueprintTInfo.style.height = "50px";
+    sblueprintTInfo.style.top = "305px";
+    sblueprintTInfo.style.left = "300px";
+    sblueprintTInfo.style.fontSize = "120%";
+    sblueprintTInfo.style.verticalAlign = "middle";
+    div1.appendChild(sblueprintTInfo);
     
     
     const wblueprintTInput = document.createElement('input');
@@ -168,7 +193,7 @@ function delayStart() {
     wblueprintTInput.style.position = "absolute";
     wblueprintTInput.style.width = "50px";
     wblueprintTInput.style.height = "50px";
-    wblueprintTInput.style.top = "550px";
+    wblueprintTInput.style.top = "350px";
     wblueprintTInput.style.fontSize = "150%";
     wblueprintTInput.style.left = "170px";
     wblueprintTInput.value = 1;
@@ -177,20 +202,63 @@ function delayStart() {
     
     const wblueprintTInfo = document.createElement('label');
     wblueprintTInfo.id = "wbbj";
-    wblueprintTInfo.innerText = "Blackberry Jam";
+    wblueprintTInfo.innerText = "Blackberry Jam:";
     wblueprintTInfo.style.position = "absolute";
     wblueprintTInfo.style.width = "150px";
     wblueprintTInfo.style.height = "50px";
-    wblueprintTInfo.style.top = "565px";
+    wblueprintTInfo.style.top = "365px";
     wblueprintTInfo.style.fontSize = "120%";
     wblueprintTInfo.style.verticalAlign = "middle";
     div1.appendChild(wblueprintTInfo);
     
     
+    const ablueprintTInput = document.createElement('input');
+    ablueprintTInput.id = "ablueprintTInput";
+    ablueprintTInput.style.position = "absolute";
+    ablueprintTInput.style.width = "50px";
+    ablueprintTInput.style.height = "50px";
+    ablueprintTInput.style.top = "350px";
+    ablueprintTInput.style.fontSize = "150%";
+    ablueprintTInput.style.left = "470px";
+    ablueprintTInput.value = 2;
+    div1.appendChild(ablueprintTInput);
+    var bp = document.getElementById("ablueprintTInput").value;
+    
+    const ablueprintTInfo = document.createElement('label');
+    ablueprintTInfo.id = "abbj";
+    ablueprintTInfo.innerText = "Fall Blueprint:";
+    ablueprintTInfo.style.position = "absolute";
+    ablueprintTInfo.style.width = "150px";
+    ablueprintTInfo.style.height = "50px";
+    ablueprintTInfo.style.top = "365px";
+    ablueprintTInfo.style.left = "300px";
+    ablueprintTInfo.style.fontSize = "120%";
+    ablueprintTInfo.style.verticalAlign = "middle";
+    div1.appendChild(ablueprintTInfo);
+    
+    //const fernInProdCB = document.createElement('dropdown');
+    //fernInProdCB.id = "fernInProdCB";
+    //fernInProdCB.style.position = "absolute";
+    //fernInProdCB.style.width = "150px";
+    //fernInProdCB.style.height = "50px";
+    //fernInProdCB.style.top = "50px";
+    //fernInProdCB.style.left = "500px";
+    //div1.appendChild(fernInProdCB);
+    
+    const changeInfo = document.createElement('label');
+    changeInfo.innerText = "v0.0.1 - Added start from current run time and season blueprints";
+    changeInfo.style.position = "absolute";
+    changeInfo.style.width = "650px";
+    changeInfo.style.height = "250px";
+    changeInfo.style.top = "465px";
+    changeInfo.style.fontSize = "140%";
+    changeInfo.style.verticalAlign = "middle";
+    div1.appendChild(changeInfo);
+    
     const atranscensionInfo = document.createElement('label');
     atranscensionInfo.innerText = "Not transcending";
     atranscensionInfo.style.position = "absolute";
-    atranscensionInfo.style.width = "350px";
+    atranscensionInfo.style.width = "650px";
     atranscensionInfo.style.height = "50px";
     atranscensionInfo.style.top = "665px";
     atranscensionInfo.style.fontSize = "170%";
@@ -205,6 +273,8 @@ function delayStart() {
 
 function startBungus(){
     isBungus = !isBungus;
+    document.getElementById("startTranscends").disabled = true;
+    setTimeout(reEnableButton, 1100);
     if (isBungus){
         transcendTime = document.getElementById("transcendTimeInput").value * 60;
         productionTime = document.getElementById("productionTimeInput").value * 60;
@@ -216,7 +286,7 @@ function startBungus(){
         }else{
            transcendInfo.innerText = "Starting...";
         }
-        
+        timePassed = Math.floor(B.ra);
         setTimeout(scriptLoop, 1000);
     }
     else{
@@ -236,6 +306,10 @@ function startBungus(){
     }else{
        document.getElementById("startTranscends").innerText = isBungus ? "Stop" : "Start";
     }
+}
+
+function reEnableButton(){
+    document.getElementById("startTranscends").disabled = false;
 }
 
 var transcendTime = 1000;
@@ -272,7 +346,9 @@ function scriptLoop(){
                 bungusAbility(1);
             }
             
-            collectFern();
+            if (!getWeathers()){
+                collectFern();
+            }            
         }
     }
 
@@ -282,9 +358,9 @@ function scriptLoop(){
     }
     
     if (bungify){
-       transcendInfo.innerText = "Time until bungus: " + (transcendTime - timePassed) + "s";
+       transcendInfo.innerText = "Time until bungus: " + (transcendTime - timePassed) + "s (" + (productionTime - timePassed > 0 ? productionTime - timePassed : 0) + "s to wungus)";
     }else{
-       transcendInfo.innerText = "Time until transcend: " + (transcendTime - timePassed) + "s";
+       transcendInfo.innerText = "Time until transcend: " + (transcendTime - timePassed) + "s (" + (productionTime - timePassed > 0 ? productionTime - timePassed : 0) + "s to production)";
     }
 
     timePassed++;
@@ -324,6 +400,12 @@ function switchFruits(x){
 function loadBlueprint(){
     //addAction({type:ACTION_PLANT_BLUEPRINT, blueprint:blueprints[index]});
     var bpt = document.getElementById("blueprintTInput").value;
+    if (Ah() == 1){
+        bpt = document.getElementById("sblueprintTInput").value;
+    }
+    if (Ah() == 2){
+        bpt = document.getElementById("ablueprintTInput").value;
+    }
     if (Ah() == 3){
         bpt = document.getElementById("wblueprintTInput").value;
     }
@@ -350,8 +432,10 @@ function translateBungus(){
         document.getElementById("info2").innerText = "Production time:";
         document.getElementById("sfi").innerText = "Speed fruit:";
         document.getElementById("pfi").innerText = "Production fruit:";
-        document.getElementById("bbj").innerText = "Blueprint:";
+        document.getElementById("bbj").innerText = "Spring Blueprint:";
         document.getElementById("wbbj").innerText = "Winter Blueprint:";
+        document.getElementById("abbj").innerText = "Fall Blueprint:";
+        document.getElementById("sbbj").innerText = "Summer Blueprint:";
     }
     else{
         document.getElementById("startTranscends").innerText = isBungus ? "Stopus" : "Bungus?";
@@ -361,6 +445,8 @@ function translateBungus(){
         document.getElementById("pfi").innerText = "Wungus fruit:";
         document.getElementById("bbj").innerText = "Blueberry Jam:";
         document.getElementById("wbbj").innerText = "Blackberry Jam:";
+        document.getElementById("abbj").innerText = "Raspberry Jam:";
+        document.getElementById("sbbj").innerText = "Strawberry Jam:";
     }
 }
 
