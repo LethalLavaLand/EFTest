@@ -163,18 +163,42 @@ function delayStart() {
     
     
     
+    const wblueprintTInput = document.createElement('input');
+    wblueprintTInput.id = "wblueprintTInput";
+    wblueprintTInput.style.position = "absolute";
+    wblueprintTInput.style.width = "50px";
+    wblueprintTInput.style.height = "50px";
+    wblueprintTInput.style.top = "550px";
+    wblueprintTInput.style.fontSize = "150%";
+    wblueprintTInput.style.left = "170px";
+    wblueprintTInput.value = 1;
+    div1.appendChild(wblueprintTInput);
+    var bp = document.getElementById("wblueprintTInput").value;
+    
+    const wblueprintTInfo = document.createElement('label');
+    wblueprintTInfo.id = "wbbj";
+    wblueprintTInfo.innerText = "Blackberry Jam";
+    wblueprintTInfo.style.position = "absolute";
+    wblueprintTInfo.style.width = "150px";
+    wblueprintTInfo.style.height = "50px";
+    wblueprintTInfo.style.top = "565px";
+    wblueprintTInfo.style.fontSize = "120%";
+    wblueprintTInfo.style.verticalAlign = "middle";
+    div1.appendChild(wblueprintTInfo);
+    
+    
     const atranscensionInfo = document.createElement('label');
     atranscensionInfo.innerText = "Not transcending";
     atranscensionInfo.style.position = "absolute";
     atranscensionInfo.style.width = "350px";
     atranscensionInfo.style.height = "50px";
-    atranscensionInfo.style.top = "565px";
+    atranscensionInfo.style.top = "665px";
     atranscensionInfo.style.fontSize = "170%";
     atranscensionInfo.style.verticalAlign = "middle";
     div1.appendChild(atranscensionInfo);
     transcendInfo = atranscensionInfo;
 
-    
+    //alert(Ah());
     setTimeout(translateBungus, 200);
     //setInterval(scriptLoop, 1000);
 }
@@ -238,9 +262,15 @@ function scriptLoop(){
     if (timePassed % 5 == 0){
         vv(false,false);
         if (timePassed > productionTime){
-            bungusAbility(0);
-            bungusAbility(1);
-            bungusAbility(2);
+            if (getWeathers()){
+                bungusAbility(2);
+            }
+            if (getWeathers()){
+                bungusAbility(0);
+            }
+            if (getWeathers()){
+                bungusAbility(1);
+            }
         }
     }
 
@@ -292,9 +322,14 @@ function switchFruits(x){
 function loadBlueprint(){
     //addAction({type:ACTION_PLANT_BLUEPRINT, blueprint:blueprints[index]});
     var bpt = document.getElementById("blueprintTInput").value;
+    if (Ah() == 3){
+        bpt = document.getElementById("wblueprintTInput").value;
+    }
+
     if (bpt > 9 || bpt <= 0){
         btp = 1;
     }
+    
     X({type:Lz,fh:B.Ld[bpt-1]})
     W();
 }
@@ -314,6 +349,7 @@ function translateBungus(){
         document.getElementById("sfi").innerText = "Speed fruit:";
         document.getElementById("pfi").innerText = "Production fruit:";
         document.getElementById("bbj").innerText = "Blueprint:";
+        document.getElementById("wbbj").innerText = "Winter Blueprint:";
     }
     else{
         document.getElementById("startTranscends").innerText = isBungus ? "Stopus" : "Bungus?";
@@ -322,7 +358,17 @@ function translateBungus(){
         document.getElementById("sfi").innerText = "Bungus fruit:";
         document.getElementById("pfi").innerText = "Wungus fruit:";
         document.getElementById("bbj").innerText = "Blueberry Jam:";
+        document.getElementById("wbbj").innerText = "Blackberry Jam:";
     }
+}
+
+function getWeathers(){
+    var sun = B.time-B.$a;
+    var rainbow = B.time-B.Oa;
+    var mist = B.time-B.Na
+    
+    return !((sun < Rg(120) && B.Ua == 0) || (mist < Rg(180) && B.Ua == 1) || (rainbow < Rg(240) && B.Ua == 2));
+    //return (sun < Rg(120) && B.Ua != 0) && (mist < Rg(180) && B.Ua != 1) && (rainbow < Rg(240) && B.Ua != 2);
 }
 
 setTimeout(delayStart, startupDelay);
