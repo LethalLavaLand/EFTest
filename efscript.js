@@ -235,10 +235,10 @@ function autoBungus(){
 //FALSE == SPEED && TRUE == PRODUCTION
 function switchFruits(x){
     if (x){
-        X({type:Av,slot:document.getElementById("productionFruitInput").value,silent:true,pi:true})
+        X({type:Av,slot:document.getElementById("productionFruitInput").value-1,silent:true,pi:true})
     }
     else{
-        X({type:Av,slot:document.getElementById("speedFruitInput").value,silent:true,pi:true})
+        X({type:Av,slot:document.getElementById("speedFruitInput").value-1,silent:true,pi:true})
     }
     W();
 }
