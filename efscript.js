@@ -160,6 +160,8 @@ function delayStart() {
     div1.appendChild(atranscensionInfo);
     transcendInfo = atranscensionInfo;
     
+    vv(false,false);
+
     //setInterval(scriptLoop, 1000);
 }
 
@@ -199,6 +201,11 @@ function scriptLoop(){
         transcendInfo.innerText = "Bungus commence";
         return;   
     }
+    if (timePassed > productionTime && timePassed % 5 == 0){
+        bungusAbility(0);
+        bungusAbility(1);
+        bungusAbility(2);
+    }
     if (!isBungus){
         return;   
     }
@@ -229,6 +236,7 @@ function switchFruits(x){
     else{
         X({type:Av,slot:document.getElementById("speedFruitInput").value,silent:true,pi:true})
     }
+    W();
 }
 
 function loadBlueprint(){
@@ -238,6 +246,12 @@ function loadBlueprint(){
         btp = 1;
     }
     X({type:Lz,fh:g[bpt-1]})
+    W();
+}
+
+function bungusAbility(x){
+    X({type:uv,pe:x});
+    W();
 }
 
 setTimeout(delayStart, startupDelay);
