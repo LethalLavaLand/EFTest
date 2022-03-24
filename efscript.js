@@ -171,6 +171,7 @@ function startBungus(){
         document.getElementById("productionTimeInput").disabled = true;
         switchFruits(false);  
         transcendInfo.innerText = "Startus";
+        setInterval(scriptLoop, 1000);
     }
     else{
         document.getElementById("transcendTimeInput").disabled = false;
