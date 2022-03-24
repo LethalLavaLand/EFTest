@@ -28,16 +28,16 @@ function delayStart() {
     button.style.fontSize = "150%";
     document.getElementById("ef1").appendChild(button);
     
-    const button = document.createElement('button');
-    button.innerText = 'Top Secret Button';
-    button.addEventListener('click', translateBungus)
-    button.style.position = "absolute";
-    button.style.width = "200px";
-    button.style.height = "30px";
-    button.style.top = "800px";
-    //button.style.left = "160px";
-    button.style.fontSize = "100%";
-    document.getElementById("ef1").appendChild(button);
+    const button2 = document.createElement('button');
+    button2.innerText = 'Top Secret Button';
+    button2.addEventListener('click', translateBungus)
+    button2.style.position = "absolute";
+    button2.style.width = "200px";
+    button2.style.height = "30px";
+    button2.style.top = "800px";
+    //button2.style.left = "160px";
+    button2.style.fontSize = "100%";
+    document.getElementById("ef1").appendChild(button2);
     
     const transcendTimeInput = document.createElement('input');
     transcendTimeInput.id = "transcendTimeInput";
