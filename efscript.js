@@ -304,7 +304,7 @@ function bungusAbility(x){
     W();
 }
 
-var bungify = false;
+var bungify = true;
 function translateBungus(){
     bungify = !bungify;
     if (bungify){
