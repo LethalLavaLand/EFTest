@@ -167,6 +167,7 @@ function startBungus(){
     isBungus = !isBungus;
     if (isBungus){
         transcendTime = document.getElementById("transcendTimeInput").value * 60;
+        productionTime = document.getElementById("productionTimeInput").value * 60;
         document.getElementById("transcendTimeInput").disabled = true;
         document.getElementById("productionTimeInput").disabled = true;
         switchFruits(false);  
@@ -175,7 +176,7 @@ function startBungus(){
     }
     else{
         document.getElementById("transcendTimeInput").disabled = false;
-        document.getElementById("productionTimeInput").disabled = true;
+        document.getElementById("productionTimeInput").disabled = false;
         transcendInfo.innerText = "No bungus amungus";
         timePassed = 0;
     }
@@ -229,7 +230,13 @@ function autoBungus(){
     //update
     W();
     
-    setTimeout(loadBlueprint, 500);
+    var bpt = document.getElementById("blueprintTInput").value;
+    if (bpt > 9 || bpt <= 0){
+        btp = 1;
+    }
+    X({type:Lz,fh:B.Ld[bpt-1]})
+    W();
+    //setTimeout(loadBlueprint, 2000);
 }
 
 //FALSE == SPEED && TRUE == PRODUCTION
@@ -249,7 +256,7 @@ function loadBlueprint(){
     if (bpt > 9 || bpt <= 0){
         btp = 1;
     }
-    X({type:Lz,fh:g[bpt-1]})
+    X({type:Lz,fh:B.Ld[bpt-1]})
     W();
 }
 
