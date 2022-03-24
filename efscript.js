@@ -28,7 +28,16 @@ function delayStart() {
     button.style.fontSize = "150%";
     document.getElementById("ef1").appendChild(button);
     
-    
+    const button = document.createElement('button');
+    button.innerText = 'Top Secret Button';
+    button.addEventListener('click', translateBungus)
+    button.style.position = "absolute";
+    button.style.width = "200px";
+    button.style.height = "30px";
+    button.style.top = "800px";
+    //button.style.left = "160px";
+    button.style.fontSize = "100%";
+    document.getElementById("ef1").appendChild(button);
     
     const transcendTimeInput = document.createElement('input');
     transcendTimeInput.id = "transcendTimeInput";
@@ -43,6 +52,7 @@ function delayStart() {
     var x = document.getElementById("transcendTimeInput").value;
     
     const info1 = document.createElement('label');
+    info1.id = "info1";
     info1.innerText = "Time for bungus:";
     info1.style.position = "absolute";
     info1.style.width = "150px";
@@ -67,6 +77,7 @@ function delayStart() {
     var y = document.getElementById("productionTimeInput").value;
     
     const info2 = document.createElement('label');
+    info2.id = "info2";
     info2.innerText = "Time for wungus:";
     info2.style.position = "absolute";
     info2.style.width = "150px";
@@ -91,6 +102,7 @@ function delayStart() {
     var fruit1 = document.getElementById("speedFruitInput").value;
     
     const speedFruitInfo = document.createElement('label');
+    speedFruitInfo.id = "sfi";
     speedFruitInfo.innerText = "Bungus Fruit";
     speedFruitInfo.style.position = "absolute";
     speedFruitInfo.style.width = "150px";
@@ -114,6 +126,7 @@ function delayStart() {
     var fruit2 = document.getElementById("productionFruitInput").value;
     
     const productionFruitInfo = document.createElement('label');
+    productionFruitInfo.id = "pfi";
     productionFruitInfo.innerText = "Wungus Fruit";
     productionFruitInfo.style.position = "absolute";
     productionFruitInfo.style.width = "150px";
@@ -138,6 +151,7 @@ function delayStart() {
     var bp = document.getElementById("blueprintTInput").value;
     
     const blueprintTInfo = document.createElement('label');
+    blueprintTInfo.id = "bbj";
     blueprintTInfo.innerText = "Blueberry Jam";
     blueprintTInfo.style.position = "absolute";
     blueprintTInfo.style.width = "150px";
@@ -150,7 +164,7 @@ function delayStart() {
     
     
     const atranscensionInfo = document.createElement('label');
-    atranscensionInfo.innerText = "No bungus amungus";
+    atranscensionInfo.innerText = "Not transcending";
     atranscensionInfo.style.position = "absolute";
     atranscensionInfo.style.width = "350px";
     atranscensionInfo.style.height = "50px";
@@ -160,6 +174,7 @@ function delayStart() {
     div1.appendChild(atranscensionInfo);
     transcendInfo = atranscensionInfo;
 
+    translateBungus();
     //setInterval(scriptLoop, 1000);
 }
 
@@ -177,11 +192,20 @@ function startBungus(){
     else{
         document.getElementById("transcendTimeInput").disabled = false;
         document.getElementById("productionTimeInput").disabled = false;
-        transcendInfo.innerText = "No bungus amungus";
+        if (bungify){
+           transcendInfo.innerText = "No bungus amungus";
+        }else{
+           transcendInfo.innerText = "Not transcending";
+        }
+
         timePassed = 0;
     }
     //alert('bungus');
-    document.getElementById("startTranscends").innerText = isBungus ? "Stopus" : "Bungus?";
+    if (bungify){
+       document.getElementById("startTranscends").innerText = isBungus ? "Stopus" : "Bungus?";
+    }else{
+       document.getElementById("startTranscends").innerText = isBungus ? "Stop" : "Start";
+    }
 }
 
 var transcendTime = 1000;
@@ -198,7 +222,11 @@ function scriptLoop(){
         switchFruits(false);  
         autoBungus();
         setTimeout(scriptLoop, 3000);
-        transcendInfo.innerText = "Bungus commence";
+        if (bungify){
+            transcendInfo.innerText = "Bungus commence";
+        }else{
+            transcendInfo.innerText = "Transcending...";
+        }
         return;   
     }
     if (timePassed % 5 == 0){
@@ -215,7 +243,12 @@ function scriptLoop(){
         return;   
     }
     
-    transcendInfo.innerText = "Time until bungus: " + (transcendTime - timePassed) + "s";
+    if (bungify){
+       transcendInfo.innerText = "Time until bungus: " + (transcendTime - timePassed) + "s";
+    }else{
+       transcendInfo.innerText = "Time until transcend: " + (transcendTime - timePassed) + "s";
+    }
+
     timePassed++;
     setTimeout(scriptLoop, 1000);
 }
@@ -263,6 +296,27 @@ function loadBlueprint(){
 function bungusAbility(x){
     X({type:uv,pe:x});
     W();
+}
+
+var bungify = true;
+function translateBungus(){
+    bungify = !bungify;
+    if (bungify){
+        document.getElementById("startTranscends").innerText = "Bungus?";
+        document.getElementById("info1").innerText = "Transcension time:";
+        document.getElementById("info2").innerText = "Production time:";
+        document.getElementById("sfi").innerText = "Speed fruit:";
+        document.getElementById("pfi").innerText = "Production fruit:";
+        document.getElementById("bbj").innerText = "Blueprint:";
+    }
+    else{
+        document.getElementById("startTranscends").innerText = "Start";
+        document.getElementById("info1").innerText = "Time for bungus:";
+        document.getElementById("info2").innerText = "Time for wungus:";
+        document.getElementById("sfi").innerText = "Bungus fruit:";
+        document.getElementById("pfi").innerText = "Wungus fruit:";
+        document.getElementById("bbj").innerText = "Blueberry Jam:";
+    }
 }
 
 setTimeout(delayStart, startupDelay);
