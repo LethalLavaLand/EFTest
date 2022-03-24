@@ -171,7 +171,7 @@ function startBungus(){
         document.getElementById("productionTimeInput").disabled = true;
         switchFruits(false);  
         transcendInfo.innerText = "Startus";
-        setInterval(scriptLoop, 1000);
+        setTimeout(scriptLoop, 1000);
     }
     else{
         document.getElementById("transcendTimeInput").disabled = false;
@@ -196,7 +196,7 @@ function scriptLoop(){
         timePassed = 0;
         switchFruits(false);  
         autoBungus();
-        setInterval(scriptLoop, 3000);
+        setTimeout(scriptLoop, 3000);
         transcendInfo.innerText = "Bungus commence";
         return;   
     }
@@ -216,7 +216,7 @@ function scriptLoop(){
     
     transcendInfo.innerText = "Time until bungus: " + (transcendTime - timePassed) + "s";
     timePassed++;
-    setInterval(scriptLoop, 1000);
+    setTimeout(scriptLoop, 1000);
 }
 
 function autoBungus(){     
@@ -229,7 +229,7 @@ function autoBungus(){
     //update
     W();
     
-    setInterval(loadBlueprint, 500);
+    setTimeout(loadBlueprint, 500);
 }
 
 //FALSE == SPEED && TRUE == PRODUCTION
