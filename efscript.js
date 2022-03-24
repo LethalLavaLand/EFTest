@@ -222,7 +222,7 @@ function autoBungus(){
 }
 
 //FALSE == SPEED && TRUE == PRODUCTION
-function switchFruits(var x){
+function switchFruits(x){
     if (x){
         X({type:Av,slot:document.getElementById("productionFruitInput").value,silent:true,pi:true})
     }
