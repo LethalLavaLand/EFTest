@@ -159,8 +159,6 @@ function delayStart() {
     atranscensionInfo.style.verticalAlign = "middle";
     div1.appendChild(atranscensionInfo);
     transcendInfo = atranscensionInfo;
-    
-    vv(false,false);
 
     //setInterval(scriptLoop, 1000);
 }
@@ -201,11 +199,16 @@ function scriptLoop(){
         transcendInfo.innerText = "Bungus commence";
         return;   
     }
-    if (timePassed > productionTime && timePassed % 5 == 0){
-        bungusAbility(0);
-        bungusAbility(1);
-        bungusAbility(2);
+    if (timePassed % 5 == 0){
+        vv(false,false);
+        if (timePassed > productionTime){
+            bungusAbility(0);
+            bungusAbility(1);
+            bungusAbility(2);
+        }
     }
+
+
     if (!isBungus){
         return;   
     }
