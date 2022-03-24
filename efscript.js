@@ -307,7 +307,7 @@ function bungusAbility(x){
 var bungify = true;
 function translateBungus(){
     bungify = !bungify;
-    if (bungify){
+    if (!bungify){
         document.getElementById("startTranscends").innerText = "Start";
         document.getElementById("info1").innerText = "Transcension time:";
         document.getElementById("info2").innerText = "Production time:";
