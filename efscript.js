@@ -416,7 +416,7 @@ function loadBlueprint(){
         btp = 1;
     }
     
-    W({type:Lz,fh:A.g[bpt-1]})
+    W({type:Lz,fh:g[bpt-1]})
     V();
 }
 
