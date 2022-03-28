@@ -415,7 +415,7 @@ function loadBlueprint(){
         btp = 1;
     }
     
-    W({type:Lz,fh:B.Ld[bpt-1]})
+    W({type:Lz,fh:A.g[bpt-1]})
     V();
 }
 
@@ -452,11 +452,12 @@ function translateBungus(){
 }
 
 function getWeathers(){
-    var sun = B.time-B.$a;
-    var rainbow = B.time-B.Oa;
-    var mist = B.time-B.Na
+    var sun = A.time-A.$a;
+    var rainbow = A.time-A.Oa;
+    var mist = A.time-A.Na
     
-    return !((sun < Rg(120) && B.Ua == 0) || (mist < Rg(180) && B.Ua == 1) || (rainbow < Rg(240) && B.Ua == 2));
+    //1197 "Changed weather into sun"
+    return !((sun < Qg(120) && A.Ua == 0) || (mist < Qg(180) && A.Ua == 1) || (rainbow < Qg(240) && A.Ua == 2));
     //return (sun < Rg(120) && B.Ua != 0) && (mist < Rg(180) && B.Ua != 1) && (rainbow < Rg(240) && B.Ua != 2);
 }
 
