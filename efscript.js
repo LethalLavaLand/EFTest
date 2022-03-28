@@ -286,7 +286,8 @@ function startBungus(){
         }else{
            transcendInfo.innerText = "Starting...";
         }
-        timePassed = Math.floor(B.ra);
+        //955 Time in this field
+        timePassed = Math.floor(A.ra);
         setTimeout(scriptLoop, 1000);
     }
     else{
