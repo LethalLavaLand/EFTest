@@ -286,7 +286,7 @@ function startBungus(){
         }else{
            transcendInfo.innerText = "Starting...";
         }
-        //955 Time in this field
+        //955 "Time in this field"
         timePassed = Math.floor(A.ra);
         setTimeout(scriptLoop, 1000);
     }
@@ -369,8 +369,8 @@ function scriptLoop(){
 }
 
 function autoBungus(){     
-    //addAction
-    W({type:gw,challenge:0});
+    //addAction 825 "efDialogEthereal"
+    W({type:dw,challenge:0});
     
     //closeAllDialogs
     Ka();
