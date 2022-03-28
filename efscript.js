@@ -246,7 +246,7 @@ function delayStart() {
     //div1.appendChild(fernInProdCB);
     
     const changeInfo = document.createElement('label');
-    changeInfo.innerText = "v0.0.1 - Added start from current run time and season blueprints";
+    changeInfo.innerText = "v0.0.1 - Added start from current run time and season blueprints\nFixed for v0.1.98c";
     changeInfo.style.position = "absolute";
     changeInfo.style.width = "650px";
     changeInfo.style.height = "250px";
