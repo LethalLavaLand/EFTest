@@ -416,7 +416,8 @@ function loadBlueprint(){
         btp = 1;
     }
     
-    W({type:Lz,fh:g[bpt-1]})
+    //1088 Ethereal blueprint library
+    W({type:Lz,fh:A.Ld[bpt-1]})
     V();
 }
 
