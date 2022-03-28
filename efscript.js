@@ -369,13 +369,13 @@ function scriptLoop(){
 
 function autoBungus(){     
     //addAction
-    X({type:gw,challenge:0});
+    W({type:gw,challenge:0});
     
     //closeAllDialogs
-    La();
+    Ka();
     
     //update
-    W();
+    V();
     
     //var bpt = document.getElementById("blueprintTInput").value;
     //if (bpt > 9 || bpt <= 0){
@@ -389,17 +389,18 @@ function autoBungus(){
 //FALSE == SPEED && TRUE == PRODUCTION
 function switchFruits(x){
     if (x){
-        X({type:Av,slot:document.getElementById("productionFruitInput").value-1,silent:true,pi:true})
+        W({type:Av,slot:document.getElementById("productionFruitInput").value-1,silent:true,pi:true})
     }
     else{
-        X({type:Av,slot:document.getElementById("speedFruitInput").value-1,silent:true,pi:true})
+        W({type:Av,slot:document.getElementById("speedFruitInput").value-1,silent:true,pi:true})
     }
-    W();
+    V();
 }
 
 function loadBlueprint(){
     //addAction({type:ACTION_PLANT_BLUEPRINT, blueprint:blueprints[index]});
     var bpt = document.getElementById("blueprintTInput").value;
+    //Season num
     if (Ah() == 1){
         bpt = document.getElementById("sblueprintTInput").value;
     }
@@ -414,13 +415,13 @@ function loadBlueprint(){
         btp = 1;
     }
     
-    X({type:Lz,fh:B.Ld[bpt-1]})
-    W();
+    W({type:Lz,fh:B.Ld[bpt-1]})
+    V();
 }
 
 function bungusAbility(x){
-    X({type:uv,pe:x});
-    W();
+    W({type:uv,pe:x});
+    V();
 }
 
 var bungify = true;
@@ -462,10 +463,10 @@ function getWeathers(){
 function collectFern(){
     for(var XX = 0; XX <= 9; XX++) {
         for(var YY = 0; YY <= 9; YY++) {
-            X({type:Mv,x:XX,y:YY});
+            W({type:Mv,x:XX,y:YY});
         }
     }
-    W();
+    V();
     //X({type:Mv,x:B.Nf,y:B.$b});
     //!N&&B.qa&&B.Ca==L.x&&B.Da==L.y
 }
