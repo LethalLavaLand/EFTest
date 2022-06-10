@@ -374,7 +374,7 @@ function autoBungus(){
     X({type:dw,challenge:0});
     
     //closeAllDialogs
-    Ka();
+    La();
     
     //update
     U();
