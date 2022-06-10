@@ -335,7 +335,8 @@ function scriptLoop(){
         return;   
     }
     if (timePassed % 5 == 0){
-        vv(false,false);
+        //refreshWatercress()
+        rx(false,false);
         if (timePassed > productionTime){
             if (getWeathers()){
                 bungusAbility(2);
