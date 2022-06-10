@@ -376,7 +376,7 @@ function autoBungus(){
     Ka();
     
     //update
-    V();
+    U();
     
     //var bpt = document.getElementById("blueprintTInput").value;
     //if (bpt > 9 || bpt <= 0){
@@ -395,7 +395,7 @@ function switchFruits(x){
     else{
         X({type:Av,slot:document.getElementById("speedFruitInput").value-1,silent:true,pi:true})
     }
-    V();
+    U();
 }
 
 function loadBlueprint(){
@@ -418,12 +418,12 @@ function loadBlueprint(){
     
     //1088 Ethereal blueprint library
     X({type:Lz,fh:A.Ld[bpt-1]})
-    V();
+    U();
 }
 
 function bungusAbility(x){
     X({type:uv,pe:x});
-    V();
+    U();
 }
 
 var bungify = true;
@@ -469,7 +469,7 @@ function collectFern(){
             X({type:Mv,x:XX,y:YY});
         }
     }
-    V();
+    U();
     //X({type:Mv,x:B.Nf,y:B.$b});
     //!N&&B.qa&&B.Ca==L.x&&B.Da==L.y
 }
