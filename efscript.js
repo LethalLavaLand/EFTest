@@ -370,7 +370,7 @@ function scriptLoop(){
 
 function autoBungus(){     
     //addAction 825 "efDialogEthereal"
-    W({type:dw,challenge:0});
+    X({type:dw,challenge:0});
     
     //closeAllDialogs
     Ka();
@@ -390,10 +390,10 @@ function autoBungus(){
 //FALSE == SPEED && TRUE == PRODUCTION
 function switchFruits(x){
     if (x){
-        W({type:Av,slot:document.getElementById("productionFruitInput").value-1,silent:true,pi:true})
+        X({type:Av,slot:document.getElementById("productionFruitInput").value-1,silent:true,pi:true})
     }
     else{
-        W({type:Av,slot:document.getElementById("speedFruitInput").value-1,silent:true,pi:true})
+        X({type:Av,slot:document.getElementById("speedFruitInput").value-1,silent:true,pi:true})
     }
     V();
 }
@@ -417,12 +417,12 @@ function loadBlueprint(){
     }
     
     //1088 Ethereal blueprint library
-    W({type:Lz,fh:A.Ld[bpt-1]})
+    X({type:Lz,fh:A.Ld[bpt-1]})
     V();
 }
 
 function bungusAbility(x){
-    W({type:uv,pe:x});
+    X({type:uv,pe:x});
     V();
 }
 
@@ -466,7 +466,7 @@ function getWeathers(){
 function collectFern(){
     for(var XX = 0; XX <= 9; XX++) {
         for(var YY = 0; YY <= 9; YY++) {
-            W({type:Mv,x:XX,y:YY});
+            X({type:Mv,x:XX,y:YY});
         }
     }
     V();
